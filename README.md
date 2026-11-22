@@ -50,5 +50,10 @@ To use a real photo instead of the drawing, upload the photo into `images/` and 
 
 Links to a single flower work too, for example `https://trapsoul07.github.io/janas-flowers/flowers.html#tulip`. The ids are: rose, tulip, sunflower, lily, daisy, orchid, peony, carnation, lavender, chrysanthemum, hydrangea, gerbera.
 
+## AI chat assistant
+A chat button appears on every page once `"chatUrl"` in `data.json` is filled in. While it is empty (`""`) the button stays hidden, so nothing changes for visitors. The assistant answers questions about flowers, meanings, care and the shop. It reads `data.json` and `flowers.json`, so updating those updates what it knows. It cannot take orders or payments; it sends people to the phone number, Facebook or the bouquet builder.
+
+It needs a small proxy to keep the API key secret. Setup steps are in `worker/README.md`.
+
 ## Bouquet builder
 `bouquet.html` lets customers drag flowers into a bouquet, choose the wrapping paper and ribbon, save a picture, and copy or send the order text. The bouquet is kept on the customer's own device. The "Send on Facebook" button uses the Facebook link from `data.json`.
